@@ -1,4 +1,9 @@
-const API_BASE_URL = 'http://localhost:5000/api';
+// ========================================
+// IMPORTANT: Replace the URL below with your actual Render backend URL
+// Example: https://hemanth-pamisetty-portfolio.onrender.com
+// ========================================
+const BACKEND_URL = 'https://hemanth-pamisetty-portfolio-backend.onrender.com';
+const API_BASE_URL = `${BACKEND_URL}/api`;
 
 async function fetchFromAPI(endpoint) {
     try {
@@ -31,5 +36,5 @@ async function postToAPI(endpoint, data) {
 function getImageUrl(path) {
     if (!path || path.includes('default.jpg')) return 'images/default.jpg';
     if (path.startsWith('http')) return path;
-    return `http://localhost:5000/${path}`;
+    return `${BACKEND_URL}/${path}`;
 }

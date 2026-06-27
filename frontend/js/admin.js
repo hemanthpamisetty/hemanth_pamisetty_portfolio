@@ -1,4 +1,5 @@
-const API_BASE = 'http://localhost:5000/api';
+// Uses BACKEND_URL from api.js (loaded before this script)
+const API_BASE = `${BACKEND_URL}/api`;
 
 function getToken() {
     return localStorage.getItem('adminToken');
@@ -362,7 +363,7 @@ async function loadProfile() {
                     favicon.rel = 'icon';
                     document.head.appendChild(favicon);
                 }
-                favicon.href = `http://localhost:5000/${data.profile_image}`;
+                favicon.href = `${BACKEND_URL}/${data.profile_image}`;
             } else {
                 label.textContent = 'No image uploaded';
             }
@@ -450,7 +451,7 @@ async function loadProjects() {
         }
 
         grid.innerHTML = projects.map(project => {
-            const imgSrc = project.image_path ? `http://localhost:5000/${project.image_path}` : 'images/default.jpg';
+            const imgSrc = project.image_path ? `${BACKEND_URL}/${project.image_path}` : 'images/default.jpg';
             const techs = project.technologies ? project.technologies.split(',').map(t => `<span class="tech-tag">${t.trim()}</span>`).join('') : '';
             return `
                 <div class="project-card">
@@ -485,7 +486,7 @@ async function loadCertificates() {
 
         tbody.innerHTML = certs.map(cert => {
             const dateStr = cert.issue_date ? new Date(cert.issue_date).toLocaleDateString() : '-';
-            const fileLink = cert.file_path ? `<a href="http://localhost:5000/${cert.file_path}" target="_blank" style="color:var(--admin-primary)">View</a>` : '-';
+            const fileLink = cert.file_path ? `<a href="${BACKEND_URL}/${cert.file_path}" target="_blank" style="color:var(--admin-primary)">View</a>` : '-';
             return `
                 <tr>
                     <td>${cert.title}</td>
@@ -523,7 +524,7 @@ async function loadResume() {
                     </div>
                 </div>
                 <div class="action-btns">
-                    <a href="http://localhost:5000/${data.file_path}" target="_blank" class="btn-admin btn-sm"><i class="fas fa-eye"></i> View</a>
+                    <a href="${BACKEND_URL}/${data.file_path}" target="_blank" class="btn-admin btn-sm"><i class="fas fa-eye"></i> View</a>
                     <button class="btn-admin btn-danger btn-sm" onclick="deleteResume(${data.id})"><i class="fas fa-trash"></i> Delete</button>
                 </div>
             `;
