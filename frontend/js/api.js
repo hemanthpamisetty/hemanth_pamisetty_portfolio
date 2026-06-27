@@ -2,7 +2,7 @@
 // IMPORTANT: Replace the URL below with your actual Render backend URL
 // Example: https://hemanth-pamisetty-portfolio.onrender.com
 // ========================================
-const BACKEND_URL = 'https://your-backend-name.onrender.com';
+const BACKEND_URL = 'https://hemanth-pamisetty-portfolio.onrender.com';
 const API_BASE_URL = `${BACKEND_URL}/api`;
 
 async function fetchFromAPI(endpoint) {
