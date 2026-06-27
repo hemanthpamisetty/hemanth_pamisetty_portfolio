@@ -6,17 +6,16 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware - CORS configuration for deployment
-app.use(cors({
-    origin: ['https://hemanth-pamisetty-portfolio-site.onrender.com', 'https://hemanth-pamisetty-portfolio-1.onrender.com', 'https://hemanth-pamisetty-portfolio-frontend.onrender.com', 'http://localhost:8000'],
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization']
-}));
+// Middleware
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Serve uploaded files statically
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+// Serve static frontend files
+app.use(express.static(path.join(__dirname, '../frontend')));
 
 // Routes
 const portfolioRoutes = require('./routes/portfolio');
@@ -25,9 +24,9 @@ const adminRoutes = require('./routes/admin');
 app.use('/api/portfolio', portfolioRoutes);
 app.use('/api/admin', adminRoutes);
 
-// Base route
-app.get('/', (req, res) => {
-    res.send('Portfolio API is running...');
+// Catch-all route to serve index.html for frontend navigation
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/index.html'));
 });
 
 app.listen(PORT, () => {

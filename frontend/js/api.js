@@ -1,9 +1,9 @@
 // ========================================
-// IMPORTANT: Replace the URL below with your actual Render backend URL
-// Example: https://hemanth-pamisetty-portfolio.onrender.com
+// Backend is now serving frontend files directly
+// We use relative paths!
 // ========================================
-const BACKEND_URL = 'https://hemanth-pamisetty-portfolio.onrender.com';
-const API_BASE_URL = `${BACKEND_URL}/api`;
+const BACKEND_URL = '';
+const API_BASE_URL = `/api`;
 
 async function fetchFromAPI(endpoint) {
     try {
