@@ -1,0 +1,142 @@
+/* Media Queries for Responsiveness */
+
+/* Tablets and below */
+@media (max-width: 992px) {
+    .home-content {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .home-text {
+        padding-right: 0;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-text p {
+        margin: 0 auto 30px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-img {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .timeline::after {
+        left: 31px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline-item::after {
+        left: 21px;
+    }
+
+    .right {
+        left: 0;
+    }
+
+    .contact-content {
+        flex-direction: column;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: var(--bg-primary);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.4s;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-links li a {
+        font-size: 1.2rem;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .home-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-text .tagline {
+        font-size: 1.2rem;
+    }
+
+    .img-box {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .section {
+        padding: 70px 0;
+    }
+    
+    .section-title {
+        margin-bottom: 40px;
+    }
+    
+    .section-title h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .img-box {
+        width: 250px;
+        height: 250px;
+    }
+
+    .home-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+    
+    .timeline-item {
+        padding-left: 50px;
+        padding-right: 10px;
+    }
+    
+    .timeline::after {
+        left: 20px;
+    }
+    
+    .timeline-item::after {
+        left: 10px;
+    }
+}

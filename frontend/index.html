@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pamisetty Hemanth Portfolio</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css?v=3">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body class="light-mode">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#home" id="nav-logo">Portfolio</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home section">
+        <div class="container home-content">
+            <div class="home-text">
+                <h3>Hello, I'm</h3>
+                <h1 id="home-name">Loading...</h1>
+                <h2 id="home-tagline" class="tagline">Loading...</h2>
+                <p id="home-intro">Loading...</p>
+                <div class="home-buttons">
+                    <a href="#" id="home-resume-btn" class="btn btn-primary" target="_blank">Download Resume <i
+                            class="fas fa-download"></i></a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+                <div class="social-links" id="home-social">
+                    <!-- Dynamic Social Links -->
+                </div>
+            </div>
+            <div class="home-img">
+                <div class="img-box">
+                    <img id="home-profile-img" src="images/default.jpg" alt="Profile Photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section bg-alt">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-img">
+                    <img id="about-profile-img" src="images/default.jpg" alt="Profile">
+                </div>
+                <div class="about-text">
+                    <h3>My Objective</h3>
+                    <p id="about-objective">Loading...</p>
+                    <div class="about-tabs">
+                        <div class="tab-buttons">
+                            <button class="tab-btn active" data-target="strengths"><i class="fas fa-star"></i>
+                                Strengths</button>
+                            <button class="tab-btn" data-target="interests"><i class="fas fa-heart"></i>
+                                Interests</button>
+                            <button class="tab-btn" data-target="languages"><i class="fas fa-language"></i>
+                                Languages</button>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="pane-strengths">
+                                <p id="about-strengths">Loading...</p>
+                            </div>
+                            <div class="tab-pane" id="pane-interests">
+                                <p id="about-interests">Loading...</p>
+                            </div>
+                            <div class="tab-pane" id="pane-languages">
+                                <p id="about-languages">Loading...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Skills</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="skills-container" id="skills-container">
+                <!-- Dynamic Skills Categories -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education section bg-alt">
+        <div class="container">
+            <div class="section-title">
+                <h2>Education</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="timeline" id="education-timeline">
+                <!-- Dynamic Education -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Projects</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="projects-grid" id="projects-grid">
+                <!-- Dynamic Projects -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates section bg-alt">
+        <div class="container">
+            <div class="section-title">
+                <h2>Certificates</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="certificates-grid" id="certificates-grid">
+                <!-- Dynamic Certificates -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Me</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Location: Dharmavaram, Sri Satya Sai (dist), Andhera Pradesh</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>Email: hemupamisetty10@example.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>Phone: 6300944709</p>
+                    </div>
+                    <div class="social-links mt-2" id="contact-social">
+                        <!-- Dynamic Social Links -->
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send Message <i
+                                class="fas fa-paper-plane"></i></button>
+                    </form>
+                    <div id="form-status"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; <span id="current-year"></span> <span id="footer-name">Your Name</span>. All Rights Reserved.</p>
+            <p><a href="login.html" class="admin-link">Admin Login</a></p>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="js/api.js?v=2"></script>
+    <script src="js/script.js?v=4"></script>
+</body>
+
+</html>
