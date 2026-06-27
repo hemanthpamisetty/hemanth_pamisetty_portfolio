@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware - CORS configuration for deployment
 app.use(cors({
-    origin: ['https://hemanth-pamisetty-portfolio-1.onrender.com', 'http://localhost:8000'],
+    origin: ['https://hemanth-pamisetty-portfolio-frontend.onrender.com', 'http://localhost:8000'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
