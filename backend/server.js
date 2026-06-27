@@ -25,7 +25,7 @@ app.use('/api/portfolio', portfolioRoutes);
 app.use('/api/admin', adminRoutes);
 
 // Catch-all route to serve index.html for frontend navigation
-app.get('*', (req, res) => {
+app.get('{*splat}', (req, res) => {
     res.sendFile(path.join(__dirname, '../frontend/index.html'));
 });
 
